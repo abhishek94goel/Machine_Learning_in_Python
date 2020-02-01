@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # import the Dataset
-dataset = pd.read_csv('Social_network_Ads.csv')
+dataset = pd.read_csv('C:\\Users\\Abhishek Goel\\Documents\\GitHub_repos\\Machine_Learning_in_Python\\Social_network_Ads.csv')
 X = dataset.iloc[:,[2,3]].values
 y = dataset.iloc[:, -1].values
 
@@ -35,12 +35,12 @@ y_pred = classifier.predict(X_test)
 # Confusion Matrics
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test, y_pred)
-display(cm)
+print(cm)
 
 # Accuracy Score
 from sklearn.metrics import accuracy_score
 acc = accuracy_score(y_test, y_pred)
-display('Accuracy is = ' + (acc*100).astype(str) + '%')
+print('Accuracy is = ' + (acc*100).astype(str) + '%')
 
 # Visualising the Training Set Results
 from matplotlib.colors import ListedColormap
